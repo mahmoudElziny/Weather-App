@@ -3,14 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="assets/images/icons8-cloud-refresh.gif" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/media.css">
 </head>
 <body>
-   
+    
+    <div class="app-container">
+        <div class="container px-3 py-5 text-center">
+            <!-- Search Bar -->
+            <input id="search" type="text" class="w-100 mx-auto rounded-5 py-3 px-4 bg-main-color mb-5 text-white", placeholder="Find your location...">
+            <div class="row g-0">
+                <!-- Today Data Section -->
+                <div class="item col-md-4 bg-sec-color m-0 rounded-4">
+                    <div id="today_date" class="d-flex justify-content-between py-2 px-3 bg-sec-color text-light rounded-start">
+                        <p id="today_date_day_name" class="my-auto">Sunday</p>
+                        <span>
+                            <span id="today_date_day-number" class="my-auto">30</span>
+                            <span id="today_date_month" class="my-auto">May</span>
+                        </span>
+                    </div>
+                    <div id="today" class="item-content text-start px-3 py-3 pt-5 text-light">
+                        <p id="today_location" class="fs-4">Cairo</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fs-1 fw-bolder">
+                                <span id="today_temp">20</span>
+                                <span><sup>o</sup>C</span>
+                            </span>
+                            <img id="today_condation_img" src="assets/images/sun.webp" alt="">
+                        </div>
+                        <p id="today_condation_text" class="fs-6 text-light-blue">sunny</p>
+                    </div>
+                    <div class="item-footer d-flex text-light p-3"></div>
+                </div> 
+                <!-- Tomorrow Data Section -->
+                <div class="item col-md-4 bg-main-color m-0 rounded-4"></div> 
+                <!-- After Tomorrow Data Section -->
+                <div class="item col-md-4 bg-sec-color m-0 rounded-4"></div> 
+
+            </div>
+        </div>
+    </div>
+
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
