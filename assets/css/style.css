@@ -1,11 +1,46 @@
-.bg-main-color {
-    background-color: #1e202b;
+body {
+    color: #bfc1c8;
+    font-family: "Roboto", "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    background: #1e202b;
 }
 
-.bg-sec-color {
-    background-color: rgb(45 48 61);
+
+.first-color {
+    background-color: #2d303d;
 }
 
-.bg-third-color {
-    background: rgb(50 53 68);
+.second-color {
+    background-color: #323544;
 }
+
+.third-color {
+    background: #222530;
+}
+
+.fourth-color {
+    background-color: #262936;
+}
+
+.color-gray {
+    color: #bfc1c8;
+}
+
+.text-light-blue {
+    color: #009ad8;
+}
+
+.text-light-orange {
+    color: #cc910d;
+}
+
+h3 {
+    color: white;
+}
+
+h5 {
+    color: #bfc1c8;
+}
+
