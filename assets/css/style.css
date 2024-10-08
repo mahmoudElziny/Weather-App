@@ -1,3 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a:hover , a:active {
+    outline: 0;
+}
+
+a {
+    background: transparent;
+}
+
+
 body {
     color: #bfc1c8;
     font-family: "Roboto", "Open Sans", sans-serif;
@@ -6,7 +20,6 @@ body {
     line-height: 1.5;
     background: #1e202b;
 }
-
 
 .first-color {
     background-color: #2d303d;
@@ -43,4 +56,108 @@ h3 {
 h5 {
     color: #bfc1c8;
 }
+
+.app-container {
+    background-image: url(../images/banner.png);
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
+
+}
+
+.navbar .container .navbar-brand img {
+    width: 70px;
+    height: 50px;
+}
+
+.navbar .container a span {
+    vertical-align: -20px;
+} 
+
+#language {
+    background-color:  #1e202b;
+    color: white;
+    margin-left: 8px;
+}
+select {
+    appearance: none;
+}
+
+#navbarNav .nav-item 
+{
+    padding-inline: 13px;
+}
+
+#navbarNav .nav-item .active {
+    padding-inline: 26px;
+    outline: #009ad8 solid 3px ;
+    border-radius: 25px;
+    color: #009ad8 !important;
+}
+
+#navbarNav .nav-item:hover a {
+    color: #009ad8 !important;
+}
+
+#navbarNav .nav-item:hover {
+        outline: #009ad8 solid 3px ;
+        border-radius: 25px;
+}
+
+
+
+#navbarNav .nav-item:hover .active {
+    outline: none;
+    border-radius: none;
+}
+
+#search {
+    background-color: #1e202b;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+#search:focus {
+    border: none;
+    outline: none;
+}
+
+#submit {
+    background-color: #009ad8;
+    right: 8px
+}
+/* 
+footer {
+    box-shadow: 0 50vh 0 50vh #262936;
+} */
+
+#subscribe {
+    background-color: #009ad8;
+    right: 8px
+}
+
+.icons i {
+    color: #009ad8;
+    background-color: #1e202b;
+    padding-inline: 10px;
+    margin-inline: 4px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.text {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+
+
+
+
+
 

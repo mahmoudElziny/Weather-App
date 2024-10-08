@@ -22,10 +22,17 @@ let nextConditionText = document.getElementsByClassName("next_condition_text");
 
 // Search input
 let searchInput = document.getElementById("search");
+let submitBtn = document.getElementById("submit");
+
+//Language List
+let languageList = document.getElementById("language"); 
+
+let cityD = 'cairo';
+let langD = languageList.value;
 
 // Fetch API Data
-async function getWeatherData(cityName) {
-    let weatherResponse = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=eb0cdecefac34da08c581526240410&q=${cityName}&days=3`);
+async function getWeatherData(cityName, lang) {    
+    let weatherResponse = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=eb0cdecefac34da08c581526240410&q=${cityName}&days=3&lang=${lang}`);
     let weatherDate = await weatherResponse.json();
     
     return weatherDate;
@@ -61,8 +68,8 @@ function displayNextDateData(weatherData) {
 }
 
 // start app
-async function startApp(city='cairo') {
-    let weatherData = await getWeatherData(city); 
+async function startApp(city= cityD, lang= langD) {
+    let weatherData = await getWeatherData(city, lang); 
     if(!weatherData.error){
         displayTodayData(weatherData);
         displayNextDateData(weatherData);
@@ -73,5 +80,16 @@ async function startApp(city='cairo') {
 startApp()
 
 searchInput.addEventListener("input", (event) => {
-    startApp(searchInput.value)
+    cityD = searchInput.value;
+    startApp(searchInput.value);    
+});
+
+submitBtn.addEventListener("click", (event) => {
+    cityD = searchInput.value;
+    startApp(searchInput.value);
+});
+
+languageList.addEventListener("change", (event) => {    
+    langD = languageList.value;
+    startApp(cityD, langD);
 });
